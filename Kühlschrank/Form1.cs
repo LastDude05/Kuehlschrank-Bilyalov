@@ -42,6 +42,38 @@ namespace Kühlschrank
         }
     }
 
-    
+    public class DatabaseConnection
+{
+    private MySqlConnection connection;
+    private string server;
+    private string database;
+    private string uid;
+
+    public DatabaseConnection()
+    {
+        server = "localhost";
+        database = "KUEHLSCHRANK";
+        uid = "root";
+        string connectionString = $"SERVER={server};DATABASE={database};UID={uid};SslMode=none;";
+        connection = new MySqlConnection(connectionString);
+    }
+
+    public void OpenConnection()
+    {
+        if (connection.State == System.Data.ConnectionState.Closed)
+            connection.Open();
+    }
+
+    public void CloseConnection()
+    {
+        if (connection.State == System.Data.ConnectionState.Open)
+            connection.Close();
+    }
+
+    public MySqlConnection GetConnection()
+    {
+        return connection;
+    }
+}
 }
 
