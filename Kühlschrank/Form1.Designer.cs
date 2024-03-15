@@ -117,8 +117,6 @@
             listBox1.Location = new Point(118, 213);
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(125, 24);
-            listBox1.TabIndex = 9;
-            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // button2
             // 
@@ -144,7 +142,6 @@
             label4.Size = new Size(79, 20);
             label4.TabIndex = 6;
             label4.Text = "Fettgehalt:";
-            label4.Click += label4_Click;
             // 
             // groupBox1
             // 
@@ -230,7 +227,6 @@
             Controls.Add(tabControl1);
             Name = "Form1";
             Text = "Form1";
-            Load += Form1_Load;
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
