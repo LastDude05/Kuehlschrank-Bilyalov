@@ -30,6 +30,7 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            button3 = new Button();
             button1 = new Button();
             richTextBox1 = new RichTextBox();
             tabPage2 = new TabPage();
@@ -55,7 +56,7 @@
             // 
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
-            tabControl1.Location = new Point(31, 27);
+            tabControl1.Location = new Point(12, 12);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
             tabControl1.Size = new Size(333, 337);
@@ -63,6 +64,7 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(button3);
             tabPage1.Controls.Add(button1);
             tabPage1.Controls.Add(richTextBox1);
             tabPage1.Location = new Point(4, 29);
@@ -73,6 +75,16 @@
             tabPage1.Text = "Kühlschrank";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            button3.Location = new Point(33, 228);
+            button3.Name = "button3";
+            button3.Size = new Size(205, 29);
+            button3.TabIndex = 2;
+            button3.Text = "Alle Lebensmittel Löschen";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // button1
             // 
             button1.Location = new Point(33, 193);
@@ -81,12 +93,13 @@
             button1.TabIndex = 1;
             button1.Text = "Kühlschrank befüllen";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // richTextBox1
             // 
-            richTextBox1.Location = new Point(17, 18);
+            richTextBox1.Location = new Point(6, 18);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(237, 169);
+            richTextBox1.Size = new Size(313, 169);
             richTextBox1.TabIndex = 0;
             richTextBox1.Text = "";
             // 
@@ -117,6 +130,7 @@
             listBox1.Location = new Point(118, 213);
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(125, 24);
+            listBox1.TabIndex = 0;
             // 
             // button2
             // 
@@ -126,6 +140,7 @@
             button2.TabIndex = 8;
             button2.Text = "in den Kühlschrank legen";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // textBox3
             // 
@@ -223,10 +238,10 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(395, 383);
+            ClientSize = new Size(351, 353);
             Controls.Add(tabControl1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Kühlschrank";
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
@@ -255,5 +270,6 @@
         private RadioButton radioButton2;
         private RadioButton radioButton1;
         private ListBox listBox1;
+        private Button button3;
     }
 }
